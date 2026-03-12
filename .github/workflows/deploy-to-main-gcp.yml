@@ -13,7 +13,7 @@ jobs:
       - name: Prepare SSH
         shell: bash
         run: |
-          mkdir -p ~/.ssh
+          ssh -i ~/.ssh/id_rsa -T "$SSH_USER@SSH_HOST"
           chmod 700 ~/.ssh
 
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
