@@ -97,7 +97,12 @@ app.get('/api/init-emoji', async (req, res) => {
 👇🏻notice the refactored app.listen:
 no code mods needed but this uses the PORT variable for PaaS deployments
 */ 
-//start the server. 
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`)
-})
+//start the server.
+async function start() {
+  await client.connect();
+  app.listen(PORT, () => {
+    console.log(`Example app listening on port ${PORT}`)
+  });
+}
+
+start();
