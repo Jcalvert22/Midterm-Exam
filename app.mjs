@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -21,7 +22,7 @@ const client = new MongoClient(uri, {
   }
 });
 
-const yourNameAndEmoji = { name: 'barry', emoji: '🐸' }; //don't use my frog. 
+const yourNameAndEmoji = { name: 'Jace', emoji: '😃' }; //don't use my frog. 
 
 
 //app instantiations
@@ -101,7 +102,7 @@ no code mods needed but this uses the PORT variable for PaaS deployments
 async function start() {
   await client.connect();
   app.listen(PORT, () => {
-    console.log(`Example app listening on port ${PORT}`)
+    console.log(`Example app listening on port http://localhost:${PORT}`)
   });
 }
 
