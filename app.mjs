@@ -29,7 +29,7 @@ const client = new MongoClient(uri, {
 
 
 app.get('/', (req, res) => {
-  res.send('Hello From CI/CD Test Server 123445')
+  res.send('Hello From Dev server')
 })
 
 app.get('/api/send-name', async (req, res) => {
