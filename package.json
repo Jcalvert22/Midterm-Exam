@@ -2,7 +2,7 @@
   "name": "midterm-exam",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.mjs",
   "scripts": {
     "start": "node app.mjs",
     "dev": "nodemon app.mjs",
@@ -15,7 +15,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Jcalvert22/Midterm-Exam/issues"
   },
