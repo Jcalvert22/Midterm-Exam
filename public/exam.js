@@ -1,9 +1,10 @@
 async function handleSubmit(event) {
   event.preventDefault();
-  const formData = new FormData(event.target);
+  const userName = document.getElementById('userName').value;
   const response = await fetch('/api/get-name', {
     method: 'POST',
-    body: formData
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userName })
   });
   const result = await response.json();
   if (result.name) {
