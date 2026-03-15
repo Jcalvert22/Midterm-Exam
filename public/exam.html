@@ -10,34 +10,23 @@
 <body>
   <h1>Full Stack Tech Exam</h1>
   
-  <!-- 💁🏼‍♂️ you may need to initialize some data before searching. Check the server endpoints -->
-  
+  <div>
+    <h2>Initialize Data</h2>
+    <button onclick="initData()">Initialize</button>
+    <p id="init-status"></p>
+  </div>
+
   <div>
     <h2>Search for Name</h2>
-    <!-- 
-    this form doesn't let you receive data back and put into the <p id="result">.
-    what do we need to do here with an external <script> 
-    -->
-        <script>
-    async function handleSubmit(event) {
-      event.preventDefault();
-      const formData = new FormData(event.target);
-      const response = await fetch('api/get-name/', {
-        method: 'POST',
-        body: formData
-      });
-      const result = await response.text();
-      document.getElementById('result').textContent = result;
-    }
-    document.getElementById('nameForm').addEventListener('submit', handleSubmit); </script>
-
-    <form id="nameForm" method="post" action="api/get-name/">
+    <form id="nameForm">
       <label for="userName">Enter name:</label>
-      <input id="userName" name="userName" placeholder="Enter a name (e.g., barry)" required>
-      <input type="submit" value="Search"> 
+      <input id="userName" name="userName" placeholder="Enter a name (e.g., jace)" required>
+      <input type="submit" value="Search">
     </form>
     <p id="result"></p>
   </div>
+
+  <script src="exam.js"></script>
 </body>
 
 </html>
