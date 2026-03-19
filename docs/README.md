@@ -13,3 +13,4 @@
 | Pull Request | https://github.com/Jcalvert22/Midterm-Exam/pull/1 |
 | Milestone | https://github.com/Jcalvert22/Midterm-Exam/milestone/1 |
 | Successful CI/CD Action | https://github.com/Jcalvert22/Midterm-Exam/actions/runs/23015573734/job/66837846824 |
+| ssh cmd to your gcp | ssh -i midterm jacecalvert04@34.186.8.218 |
